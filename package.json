@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json.schemastore.org/package",
+  "name": "@n4bb12/package-env-example",
+  "version": "0.0.0-development",
+  "private": true,
+  "description": "Good and bad examples of using environment variables in package.json",
+  "keywords": [
+    "cross-env",
+    "dotenv",
+    "env-cmd",
+    "cross-platform",
+    "environment",
+    "package"
+  ],
+  "homepage": "https://github.com/n4bb12/package-env-example/blob/master/README.md",
+  "bugs": "https://github.com/n4bb12/package-env-example/issues",
+  "repository": "github:n4bb12/package-env-example",
+  "license": "ISC",
+  "author": "Abraham Schilling",
+  "scripts": {
+    "bad1": "NODE_ENV=production node server.js",
+    "good1": "cross-env NODE_ENV=production node server.js",
+    "good2": "env-cmd --file .env.production node server.js",
+    "good3": "node -r dotenv/config server.js dotenv_config_path=.env.production"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^9.0.2",
+    "env-cmd": "^10.1.0"
+  }
+}
